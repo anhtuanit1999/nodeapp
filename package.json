@@ -4,7 +4,7 @@
   "description": "node app",
   "main": "applove.js",
   "scripts": {
-    "test": "node"
+    "start": "node applove.js"
   },
   "keywords": [
     "node"
