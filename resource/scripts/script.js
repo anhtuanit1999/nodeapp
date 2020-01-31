@@ -4,16 +4,62 @@ function myFunction() {
     let Excep = [' xinh đẹp nhất quả đất', ' dễ thương nhất vịnh Nam Bộ', ' tốt bụng', ' dễ cưng', ' nhìn là thích mê', ' ai cũng thích', 
     ' tiên nữ'];
 
-    let data = $('#input').val(), ran, ran1;
+    /*const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    });*/
+
+    let data = $('#input').val(), ran, ran1, title;
     let hihi = data.toLowerCase();
 
     ran = DB[Math.floor(Math.random()*5)];
     ran1 = Excep[Math.floor(Math.random()*5)];
+
+    if(hihi.indexOf('tuan') >= 0 || hihi == '' || hihi.indexOf('tuấn') >= 0) {
+        title = 'Error hihi!!!';
+        data = 'Nhập lại đi nha'
+    }
+    else if(hihi.indexOf('cuc') >= 0 || hihi.indexOf('cúc') >= 0) {
+        title = 'Hello baby';
+        data = data + ran1;
+    }
+    else {
+        title = 'Hello kiki ';
+        data = data + ran;
+    }
+    //$('#output').html(data);
+    if(hihi.indexOf('cuc') >= 0 || hihi.indexOf('cúc') >= 0) {
+        Swal.fire({
+            title: 'Bạn có phải là Cúc',
+            text: 'Chọn đúng hoặc sai nhé',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Chuẩn rùi nha!',
+            cancelButtonText: 'Sai bét rùi!',
+            
+            reverseButtons: true
+        }).then((result) => {
+            if(result.value) {
+                Swal.fire(
+                    'I Love You',
+                    'mlem mlem mlem',
+                    'success'
+                )
+            }
+            else if(result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Ai vậy?',
+                    'ghi bậy quá nha',
+                    'error'
+                )
+            }
+        });
+    }
+    else {
+        Swal.fire(title, data, 'warning');
+    }
     
-    if(hihi.indexOf('tuan') >= 0 || hihi == '' || hihi.indexOf('tuấn') >= 0)
-        data = 'Error hihi!!!';
-    else if(hihi.indexOf('cuc') >= 0 || hihi.indexOf('cúc') >= 0)
-        data = 'Hello baby ' + data + ran1;
-    else data = 'Hello kiki ' + data + ran;
-    $('#output').html(data);
 }
