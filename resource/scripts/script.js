@@ -39,15 +39,32 @@ function myFunction() {
             showCancelButton: true,
             confirmButtonText: 'Chuẩn rùi nha!',
             cancelButtonText: 'Sai bét rùi!',
-            
-            reverseButtons: true
+            reverseButtons: true,
+            width: 600,
+            padding: '3em',
+            background: '#fff url(resource/image/trees.png)',
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("resource/image/nyan-cat.gif")
+                left top
+                no-repeat
+            `
         }).then((result) => {
             if(result.value) {
-                Swal.fire(
-                    'I Love You',
-                    'mlem mlem mlem',
-                    'success'
-                )
+                Swal.fire({
+                    title: 'I Love You',
+                    text: 'mlem mlem mlem',
+                    icon: 'success',
+                    width: 600,
+                    padding: '3em',
+                    background: '#fff url(resource/image/trees.png)',
+                    backdrop: `
+                        rgba(0,0,123,0.4)
+                        url("resource/image/nyan-cat.gif")
+                        left top
+                        no-repeat
+                    `
+                })
             }
             else if(result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire(
