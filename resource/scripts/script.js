@@ -64,6 +64,8 @@ function myFunction() {
                         left top
                         no-repeat
                     `
+                }).then(result => {
+                    window.location = "loveHome.html";
                 })
             }
             else if(result.dismiss === Swal.DismissReason.cancel) {
