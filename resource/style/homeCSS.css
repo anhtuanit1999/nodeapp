@@ -1,4 +1,15 @@
-body{
+body {
+    margin: 0;
+}
+.lazy-background {
+    background-image: url('../../Optimized-LTU_95s07.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    height: 100%;
+}
+.lazy-background.visible {
     background-image: url('../../LTU_95s07.jpg');
     background-position: top;
     background-repeat: no-repeat;
@@ -6,11 +17,11 @@ body{
     background-attachment: local;
     height: 100%;
 }
-#text h1{
+#text h1 {
     text-shadow: red 2px -1px 3px, blue -2px 1px 2px;
     color: white;
 }
-#text h2{
+#text h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 .hover {
@@ -30,7 +41,7 @@ body{
     z-index: 2;
     overflow: hidden;
 }
-.hover:before{
+.hover:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -42,10 +53,10 @@ body{
     transform: translate(-50%, -50%) rotate(45deg);
     transition: all 0.4s cubic-bezier(0.24, 0.89, 0.68, -0.37);
 }
-.hover:hover{
+.hover:hover {
     color: #fff;
 }
-.hover:hover:before{
+.hover:hover:before {
     height: 300%;
     transform: translate(-50%, -50%) rotate(45deg);
 }
