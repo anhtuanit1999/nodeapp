@@ -2,7 +2,7 @@
   "name": "anhtuanit",
   "version": "1.0.1",
   "description": "node app",
-  "main": "applove.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
