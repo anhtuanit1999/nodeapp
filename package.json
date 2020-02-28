@@ -4,12 +4,15 @@
   "description": "node app",
   "main": "applove.js",
   "scripts": {
-    "start": "node applove.js"
+    "start": "nodemon index.js -w  js,ejs"
   },
   "keywords": [
     "node"
   ],
   "author": "AnhTuanIT",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
 }
