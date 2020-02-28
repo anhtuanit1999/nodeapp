@@ -31,9 +31,9 @@ function myFunction() {
         data = data + ran;
     }
     //$('#output').html(data);
-    if(hihi.indexOf('cuc') >= 0 || hihi.indexOf('cúc') >= 0) {
+    if(hihi.indexOf('crush') >= 0 || hihi.indexOf('cúc') >= 0) {
         Swal.fire({
-            title: 'Bạn có phải là Cúc',
+            title: 'Yêu anh thì nói một lời 💕',
             text: 'Chọn đúng hoặc sai nhé',
             icon: 'question',
             showCancelButton: true,
