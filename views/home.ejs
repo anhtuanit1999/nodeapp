@@ -1,32 +1,61 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="anhtuanit">
-    <link rel="stylesheet" href="/stylesheets/homeCSS.css">
-    <script src="/javascripts/script.js"></script>
-    <script src= "https://code.jquery.com/jquery-3.4.0.min.js" ></script>
-    <!-- SweetAlert 2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <!-- lazyload -->
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
-    <title>AnhTuanIT</title>
+  <title><%= title %></title>
+  <link rel="icon" type="image/png" href="/images/heo.gif">
+  <!-- style home -->
+  <link rel='stylesheet' href='/stylesheets/home.css' />
+  <!-- script button -->
+  <script src="/javascripts/buttonNBox.js"></script>
+  <!-- SweetAlert 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <!-- chancejs -->
+  <script src="https://chancejs.com/chance.min.js"></script>
+  <!-- JQueryUI -->
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  <!-- html2canvas -->
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <!-- thanos power -->
+  <script src="/javascripts/thanosPower.js"></script>
 </head>
-<body class="lazy-background">
-    <div>
-        <div id="text" align="center">
-            <h1>Hello World!</h1>
-            <h2> Nhập tên của bạn</h2>
-            <input type="search" id="input" placeholder="Nhập tên của bạn"/>
-            <!-- <input type="button" id="button" value="Enter" onclick="myFunction()"/> -->
-            <br/>
-            <a href="#" class="hover" onclick="myFunction()">Enter</a>
-            <h2 id="output"></h2>
-            <br/>
-        </div>
+
+<body>
+  <div class="content">
+    <div class="first">
+      <div class="img">
+        <img src="/images/LTU_95s07.jpg">
+      </div>
     </div>
-    <script src="/javascripts/lazyloadbody.js"></script>
+
+
+
+
+    <input type="radio" name="rerun" id="retrigger--1" class="retrigger" />
+    <input type="radio" name="rerun" id="retrigger--2" checked="checked" class="retrigger" />
+    <div class="bg"></div>
+
+    <!-- đưa class cần hiện lên trên cùng ở đây và set position: absolute -->
+    <div class="btn-test1">
+      <h1>Hello World!</h1>
+      <h2> Nhập tên của bạn</h2>
+      <input type="text" id="input" placeholder="Nhập tên của bạn" />
+      <br />
+      <a href="#" class="hover" onclick="myFunction()">Enter</a>
+      <h2 id="output"></h2>
+      <br />
+    </div>
+  </div>
+  <script>
+    let ele = document.querySelector('div.btn-test1');
+    if (ele) {
+      setTimeout(() => {
+        ele.className = "btn-test";
+      }, 6000);
+    }
+  </script>
 </body>
+
 </html>

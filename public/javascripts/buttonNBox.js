@@ -1,8 +1,7 @@
-﻿
 function myFunction() {
     let DB = [' ỉa chảy', ' đẹp trai', ' thấy gớm', ' thấy gớm', ' bị gay', ' óc shit'];
-    let Excep = [' xinh đẹp nhất quả đất', ' dễ thương nhất vịnh Nam Bộ', ' tốt bụng', ' dễ cưng', ' nhìn là thích mê', ' ai cũng thích', 
-    ' tiên nữ'];
+    let Excep = [' xinh đẹp nhất quả đất', ' dễ thương nhất vịnh Nam Bộ', ' tốt bụng', ' dễ cưng', ' nhìn là thích mê', ' ai cũng thích',
+        ' tiên nữ'];
 
     /*const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -15,14 +14,14 @@ function myFunction() {
     let data = $('#input').val(), ran, ran1, title;
     let hihi = data.toLowerCase();
 
-    ran = DB[Math.floor(Math.random()*5)];
-    ran1 = Excep[Math.floor(Math.random()*5)];
+    ran = DB[Math.floor(Math.random() * 5)];
+    ran1 = Excep[Math.floor(Math.random() * 5)];
 
-    if(hihi.indexOf('tuan') >= 0 || hihi == '' || hihi.indexOf('tuấn') >= 0) {
+    if (hihi.indexOf('tuan') >= 0 || hihi == '' || hihi.indexOf('tuấn') >= 0) {
         title = 'Error hihi!!!';
         data = 'Nhập lại đi nha'
     }
-    else if(hihi.indexOf('cuc') >= 0 || hihi.indexOf('cúc') >= 0) {
+    else if (hihi.indexOf('cuc') >= 0 || hihi.indexOf('cúc') >= 0) {
         title = 'Hello baby';
         data = data + ran1;
     }
@@ -31,7 +30,7 @@ function myFunction() {
         data = data + ran;
     }
     //$('#output').html(data);
-    if(hihi.indexOf('crush') >= 0 || hihi.indexOf('cúc') >= 0) {
+    if (hihi.indexOf('crush') >= 0 || hihi.indexOf('cúc') >= 0) {
         Swal.fire({
             title: 'Yêu anh thì nói một lời 💕',
             text: 'Chọn đúng hoặc sai nhé',
@@ -50,7 +49,7 @@ function myFunction() {
                 no-repeat
             `
         }).then((result) => {
-            if(result.value) {
+            if (result.value) {
                 Swal.fire({
                     title: 'I Love You',
                     text: 'mlem mlem mlem',
@@ -65,20 +64,20 @@ function myFunction() {
                         no-repeat
                     `
                 }).then(result => {
-                    window.location = "/loveHome";
+                    window.location = "/lovehome";
                 })
             }
-            else if(result.dismiss === Swal.DismissReason.cancel) {
+            else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire(
-                    'Ai vậy?',
-                    'ghi bậy quá nha',
+                    'Có thật là vậy không?',
+                    'Đáng tiếc em sẽ không có được anh mãi mãi!',
                     'error'
-                )
+                ).then(() => thanosPower());
             }
         });
     }
     else {
         Swal.fire(title, data, 'warning');
     }
-    
+
 }

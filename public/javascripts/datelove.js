@@ -37,5 +37,11 @@ var move = function(){
 }
 
 var YesBtn = function(){
-	Swal.fire("Anh biết mà! 😘", "Mlem Mlem Mlem", "success");
+	Swal.fire("Anh biết mà! 😘", "Mlem Mlem Mlem", "success")
+	.then(res => {
+		if(res.value) {
+			window.location = "/";
+		}
+	});
+
 }
