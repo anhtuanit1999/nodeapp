@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /* GET lovehome page. */
-router.get('/lovehome', function (req, res, next) {
-    res.render('lovehome');
+router.get('/', function (req, res, next) {
+  res.render('lovehome', { title: 'Express' });
 });
 
 module.exports = router;
